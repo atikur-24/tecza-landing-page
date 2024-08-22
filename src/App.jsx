@@ -1,8 +1,10 @@
+import Banner from "./components/Banner/Banner";
+
 const App = () => {
   return (
-    <section>
-      <p>Home Page</p>
-    </section>
+    <div>
+      <Banner />
+    </div>
   );
 };
 

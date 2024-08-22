@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import bannersData from "../../../public/data/banners";
+import Button from "../ui/Button";
 import "./Banner.css";
 
 const Banner = () => {
@@ -15,26 +17,31 @@ const Banner = () => {
   };
 
   useEffect(() => {
-    slideInterval.current = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+    slideInterval.current = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % bannersData.length);
+    }, 8000);
     return () => clearInterval(slideInterval.current);
   }, []);
 
   return (
-    <div className="carousel">
-      <div className="carousel-inner" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+    <div className="slider">
+      <div className="slider-inner" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
         {bannersData.map((banner) => (
-          <div key={banner.id} className="carousel-item" style={{ backgroundImage: `url(${banner.backgroundImage})` }}>
-            <div className="carousel-content">
-              <h1 className="carousel-title">{banner.title}</h1>
-              <p>{banner.subtitle}</p>
+          <div key={banner.id} className="slider-item" style={{ backgroundImage: `url(${banner.backgroundImage})` }}>
+            <div className="slider-content">
+              <h1 className="slider-title">{banner.title}</h1>
+              <p className="slider-subtitle">{banner.subtitle}</p>
+              <Link to="/contact-us">
+                <Button>Contact us</Button>
+              </Link>
             </div>
           </div>
         ))}
       </div>
-      <button className="carousel-button prev" onClick={prevSlide}>
+      <button className="slider-button prev" onClick={prevSlide} disabled={currentSlide === 0}>
         ‹
       </button>
-      <button className="carousel-button next" onClick={nextSlide}>
+      <button className="slider-button next" onClick={nextSlide} disabled={currentSlide === bannersData.length - 1}>
         ›
       </button>
     </div>
