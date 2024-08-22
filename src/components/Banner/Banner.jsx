@@ -19,14 +19,14 @@ const Banner = () => {
   useEffect(() => {
     slideInterval.current = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % bannersData.length);
-    }, 8000);
+    }, 7000);
     return () => clearInterval(slideInterval.current);
   }, []);
 
   return (
     <div className="slider">
       <div className="slider-inner" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-        {bannersData.map((banner) => (
+        {bannersData?.map((banner) => (
           <div key={banner.id} className="slider-item" style={{ backgroundImage: `url(${banner.backgroundImage})` }}>
             <div className="slider-content">
               <h1 className="slider-title">{banner.title}</h1>
