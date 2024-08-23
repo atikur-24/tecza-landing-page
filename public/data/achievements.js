@@ -1,24 +1,24 @@
-const AchievementsData = [
+const achievementsData = [
   {
     id: 1,
     title: "Satisfied Clients",
-    count: "1500+",
+    count: "1200+",
   },
   {
     id: 2,
-    title: "Countries covered",
-    count: "95+",
+    title: "Countries Covered",
+    count: "75+",
   },
   {
     id: 3,
-    title: "Success rate",
+    title: "Success Rate",
     count: "100%",
   },
   {
     id: 4,
-    title: "Satisfied Clients",
+    title: "Completed Projects",
     count: "350+",
   },
 ];
 
-export default AchievementsData;
+export default achievementsData;
