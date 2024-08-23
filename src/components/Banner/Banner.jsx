@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../ui/Button";
-import "./Banner.css";
+import "./banner.css";
 import bannersData from "/public/data/banners";
 
 const Banner = () => {

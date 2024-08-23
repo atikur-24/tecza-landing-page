@@ -2,7 +2,7 @@ import React from "react";
 import { FaCode, FaLaptopCode, FaMobileAlt, FaPencilRuler } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Button from "../ui/Button";
-import "./Services.css";
+import "./services.css";
 import servicesData from "/public/data/services";
 
 // here import services icons

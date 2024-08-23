@@ -1,7 +1,7 @@
 import React from "react";
-import AchievementsData from "../../public/data/achievements";
-import SectionTitle from "../components/ui/SectionTitle";
-import "./Achievements.css";
+import achievementsData from "../../../public/data/achievements";
+import SectionTitle from "../ui/SectionTitle";
+import "./achievements.css";
 
 const Achievements = () => {
   return (
@@ -10,7 +10,7 @@ const Achievements = () => {
       <div className="achievements-section">
         <div className="container">
           <div className="achievements-container">
-            {AchievementsData?.map((achievement) => (
+            {achievementsData?.map((achievement) => (
               <div key={achievement.id} className="achievements-content">
                 <h1 className="achievements-count">{achievement.count}</h1>
                 <p className="achievements-title">{achievement.title}</p>
