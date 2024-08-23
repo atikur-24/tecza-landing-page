@@ -76,15 +76,32 @@ body {
   margin-block: auto;
 }
 
-/* remove increment and decrement arrows from number input */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 a {
   text-decoration: none;
+}
+
+/* common form fields style */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--gray-color-7);
+  border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 1px solid var(--primary-color);
+  outline: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--gray-color-9);
 }
 
 /* styles for medium screen devices (tablets, small laptops) */
