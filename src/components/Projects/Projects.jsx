@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEye, FaSearch } from "react-icons/fa";
+import { FaEye, FaSearchPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import projectsData from "../../../public/data/projects";
 import Button from "../ui/Button";
@@ -15,20 +15,22 @@ const Projects = () => {
       />
       <div className="container">
         <div className="projects-grid">
-          {projectsData?.map((project) => (
+          {projectsData.map((project) => (
             <div key={project.id} className="project-item">
               <div className="project-image-container">
                 <img src={project.image} alt={project.title} className="project-image" />
                 <div className="project-overlay">
-                  <a href={project.link} className="icon">
-                    <FaEye />
-                  </a>
-                  <a href={project.link} className="icon">
-                    <FaSearch />
-                  </a>
+                  <h3 className="project-title">{project.title}</h3>
+                  <div className="icon-container">
+                    <p className="project-icon">
+                      <FaSearchPlus />
+                    </p>
+                    <a href={project.link} className="project-icon">
+                      <FaEye />
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h3 className="project-title">{project.title}</h3>
             </div>
           ))}
         </div>

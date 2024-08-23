@@ -14,7 +14,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "AI Driven",
+    title: "AI Predicta",
     image: project2,
     link: "https://projects/project-technix",
   },
