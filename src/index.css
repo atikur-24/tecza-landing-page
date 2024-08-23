@@ -49,10 +49,35 @@ body {
   border-radius: 4px;
   padding: 12px 18px;
   transition: all 0.3s;
+  white-space: nowrap;
   cursor: pointer;
 }
 .btn-primary:hover {
   background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0px;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border-style: none;
+  border-radius: 4px;
+  padding: 12px 18px;
+  transition: all 0.3s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.btn-large {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* section title */
@@ -118,6 +143,11 @@ a {
 
 /* styles for large screen devices (desktops, larger laptops) */
 @media (min-width: 1024px) {
+  .btn-large {
+    font-size: 18px;
+    line-height: 26px;
+    padding-inline: 22px;
+  }
 }
 
 /* styles for extra-large screen devices (large desktops, widescreen) */

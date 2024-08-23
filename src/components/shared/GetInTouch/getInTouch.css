@@ -1,0 +1,113 @@
+.getInTouch-section {
+  padding-block: 40px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  background-image: url(/public/images/others/footer_overlay.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.getInTouch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.getInTouch-content {
+  text-align: center;
+}
+
+.getInTouch-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.getInTouch-subtile {
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 4px;
+}
+
+.getInTouch-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.getInTouch-icons .social-icon {
+  background: var(--white-color);
+  color: var(--primary-color);
+  border: solid 1px #e7e2ff;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.getInTouch-icons .social-icon:hover {
+  opacity: 0.9;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  transform: scale(1.1) rotate(6deg);
+  border-color: var(--white-color);
+}
+
+/* styles for medium screen devices (tablets, small laptops) */
+@media (min-width: 768px) {
+  .getInTouch-container {
+    flex-direction: row;
+    gap: 28px;
+  }
+
+  .getInTouch-content {
+    flex-grow: 1;
+    text-align: left;
+  }
+  .getInTouch-icons .social-icon {
+    border: solid 2px #e7e2ff;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+  }
+}
+
+/* styles for large screen devices (desktops, larger laptops) */
+@media (min-width: 1024px) {
+  .getInTouch-container {
+    gap: 36px;
+  }
+
+  .getInTouch-title {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+  }
+
+  .getInTouch-subtile {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .getInTouch-icons {
+    gap: 12px;
+  }
+  .getInTouch-icons .social-icon {
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+  }
+}
+
+/* styles for extra-large screen devices (large desktops, widescreen) */
+@media (min-width: 1280px) {
+  .getInTouch-container {
+    gap: 40px;
+  }
+}
