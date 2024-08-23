@@ -26,7 +26,7 @@
 .project-image-container {
   position: relative;
   overflow: hidden;
-  height: 200px;
+  height: 180px;
 }
 
 .project-image {
@@ -94,6 +94,9 @@
 @media (min-width: 640px) {
   .projects-grid {
     gap: 16px;
+  }
+  .project-image-container {
+    height: 200px;
   }
 }
 

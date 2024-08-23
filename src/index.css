@@ -8,6 +8,7 @@
   --secondary-color: #2f1c6a;
   --secondary-color-deep: #1e293b;
   --slate-color-8: #334155;
+  --slate-color-9: #1e293b;
   --gray-color-4: #f9fafb;
   --gray-color-6: #e2e8f0;
   --gray-color-7: #cbd5e1;
@@ -37,7 +38,7 @@ body {
   padding: 0 15px;
 }
 
-/* all button styles */
+/* all button styles with variants & sizes */
 .btn-primary {
   font-size: 14px;
   font-weight: 600;
@@ -108,7 +109,9 @@ a {
 /* common form fields style */
 .form-group label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  font-weight: 400;
+  color: var(--slate-color-8);
 }
 
 .form-group input,
@@ -138,6 +141,11 @@ a {
     font-size: 16px;
     line-height: 18.4px;
     padding: 16px 24px;
+  }
+
+  .form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
   }
 }
 
