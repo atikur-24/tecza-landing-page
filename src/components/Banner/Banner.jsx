@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import bannersData from "../../../public/data/banners";
 import Button from "../ui/Button";
 import "./Banner.css";
+import bannersData from "/public/data/banners";
 
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -13,7 +13,7 @@
   --gray-color-6: #e2e8f0;
   --gray-color-7: #cbd5e1;
   --gray-color-8: #94a3b8;
-  --e-global-color-accent: #565c86;
+  --gray-color-9: #565c86;
   --e-global-color-secondary: #ff7587;
   --white-color: #fff;
 }
@@ -60,6 +60,10 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* styles for medium screen devices (tablets, small laptops) */

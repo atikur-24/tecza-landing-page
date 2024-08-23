@@ -1,20 +1,48 @@
 import React from "react";
-import servicesData from "../../../public/data/services";
+import { FaCode, FaLaptopCode, FaMobileAlt, FaPencilRuler } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Button from "../ui/Button";
 import "./Services.css";
+import servicesData from "/public/data/services";
+
+// here import services icons
+const iconMap = {
+  FaLaptopCode: <FaLaptopCode size={38} fill="#D1C5FF" color="#D1C5FF" border-color="#D1C5FF" />,
+  FaCode: <FaCode size={38} fill="#FFC1C9" color="#FFC1C9" border-color="#FFC1C9" />,
+  FaMobileAlt: <FaMobileAlt size={38} fill="#D5EAF8" color="#D5EAF8" border-color="#D5EAF8" />,
+  FaPencilRuler: <FaPencilRuler size={38} fill="#FFEECB" color="#FFEECB" border-color="#FFEECB" />,
+};
 
 const Services = () => {
   return (
-    <section className="services-section">
-      <div className="container">
-        <h2 className="section-title">Our Services</h2>
+    <section
+      style={{
+        paddingBlock: "80px",
+      }}
+      className="container"
+    >
+      <div className="services-section">
+        <div className="services-content">
+          <h2 className="services-header">Transforming Ideas into Digital Experiences</h2>
+          <p className="services-description">We specialize in crafting captivating websites, immersive user interfaces, and strategic digital marketing solutions that propel your brand’s success.</p>
+          <Link
+            style={{
+              width: "fit-content",
+            }}
+            to="/services"
+          >
+            <Button>Explore Services</Button>
+          </Link>
+        </div>
+
         <div className="services-grid">
           {servicesData?.map((service) => (
-            <div key={service.id} className="service-item">
-              <div className="service-icon">
-                <img src={service.icon} alt={service.title} />
-              </div>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-description">{service.description}</p>
+            <div key={service.id} className="services-card">
+              <div className="service-icon">{iconMap[service.icon]}</div>
+              <Link to={service.path} className="service-title">
+                {service.title}
+              </Link>
+              <p className="service-subtitle">{service.description}</p>
             </div>
           ))}
         </div>
