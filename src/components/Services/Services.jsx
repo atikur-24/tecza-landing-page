@@ -16,6 +16,7 @@ const iconMap = {
 const Services = () => {
   return (
     <section
+      // TODO: remove
       style={{
         paddingBlock: "80px",
       }}

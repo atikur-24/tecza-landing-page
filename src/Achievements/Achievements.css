@@ -1,0 +1,110 @@
+/* achievements container */
+.achievements-section {
+  background: var(--secondary-color);
+  color: var(--white-color);
+  background-image: url(/images/others/pror_overlay.svg);
+  background-position: bottom center;
+  background-size: auto;
+}
+
+.achievements-container {
+  /* TODO: remove */
+  padding-block: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 32px;
+  justify-content: space-between;
+}
+
+/* achievements content part */
+.achievements-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 6px;
+}
+
+.achievements-count {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.achievements-title {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* styles for medium screen devices (tablets, small laptops) */
+@media (min-width: 640px) {
+  .achievements-container {
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .achievements-section {
+  }
+
+  .achievements-container {
+    gap: 20px;
+  }
+
+  .achievements-content {
+    row-gap: 10px;
+  }
+
+  .achievements-count {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .achievements-title {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+}
+
+/* styles for large screen devices (desktops, larger laptops) */
+@media (min-width: 1024px) {
+  .achievements-section {
+  }
+
+  .achievements-container {
+    /* TODO: remove */
+    padding-block: 70px;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .achievements-content {
+    row-gap: 12px;
+  }
+
+  .achievements-count {
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  }
+
+  .achievements-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+/* styles for extra-large screen devices (large desktops, widescreen) */
+@media (min-width: 1280px) {
+  .achievements-content {
+    row-gap: 16px;
+  }
+}
