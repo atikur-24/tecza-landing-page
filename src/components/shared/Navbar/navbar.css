@@ -1,0 +1,113 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 40px;
+}
+
+.navbar-logo img {
+  height: auto;
+  max-width: 100%;
+}
+
+.navbar-right-side {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.navbar-wrap ul li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.navbar-wrap ul li .submenu {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  min-width: 180px;
+  background: var(--white-color);
+  margin: 0;
+  transform: scale(1, 0);
+  transform-origin: 0 0;
+  transition: all 0.3s ease-out 0s;
+  box-shadow: 0px 30px 70px 0px rgba(137, 139, 142, 0.15);
+  padding: 18px 16px;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9;
+  border-top: 4px solid var(--primary-color);
+}
+
+.navbar-wrap ul li .submenu li {
+  padding: 5px 0;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu-container li {
+  list-style: none;
+}
+.menu-container a {
+  color: var(--gray-color-9);
+  transition: all 0.2s;
+}
+.menu-container a:hover {
+  color: var(--primary-color-deep);
+}
+
+.submenu-items {
+  position: relative;
+  cursor: pointer;
+  text-wrap: nowrap;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: var(--gray-color-9);
+  transition: all 0.2s;
+}
+
+.submenu-items:hover {
+  color: var(--primary-color);
+}
+
+/* styles for medium screen devices (tablets, small laptops) */
+@media (min-width: 768px) {
+}
+
+/* styles for large screen devices (desktops, larger laptops) */
+@media (min-width: 1024px) {
+  .menu-container {
+    gap: 16px;
+  }
+  .submenu-items {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .navbar-wrap ul li .submenu li {
+    padding: 6px 0;
+  }
+
+  .navbar-wrap ul li .submenu {
+    padding: 18px;
+  }
+}
+
+/* styles for extra-large screen devices (large desktops, widescreen) */
+@media (min-width: 1280px) {
+  .menu-container {
+    gap: 28px;
+  }
+  .navbar-wrap ul li .submenu li {
+    padding: 8px 0;
+  }
+  .submenu-items {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
