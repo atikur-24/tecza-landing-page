@@ -1,9 +1,8 @@
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import menuConfig from "../../../../public/data/menuConfig";
 
-const NavItems = () => {
+const NavItems = ({ menuConfig }) => {
   return (
     <nav className="navbar-wrap">
       <ul className="menu-container">
