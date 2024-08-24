@@ -8,7 +8,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: var(--gray-color-9);
+  color: var(--gray-color-8);
 }
 
 .mobile-menu {
@@ -42,7 +42,7 @@
 
 .mobile-menu-link {
   text-decoration: none;
-  color: var(--gray-color-9);
+  color: var(--gray-color-8);
   font-weight: 500;
   display: block;
   cursor: pointer;
@@ -63,7 +63,7 @@
 
 .mobile-submenu-link {
   text-decoration: none;
-  color: var(--gray-color-9);
+  color: var(--gray-color-8);
   display: block;
   padding: 8px 0;
 }

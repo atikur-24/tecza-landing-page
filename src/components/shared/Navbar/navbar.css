@@ -55,7 +55,7 @@
   list-style: none;
 }
 .menu-container a {
-  color: var(--gray-color-9);
+  color: var(--slate-color-8);
   transition: all 0.2s;
 }
 .menu-container a:hover {
@@ -68,7 +68,7 @@
   text-wrap: nowrap;
   padding-top: 16px;
   padding-bottom: 16px;
-  color: var(--gray-color-9);
+  color: var(--slate-color-8);
   transition: all 0.2s;
   display: flex;
   gap: 2px;
