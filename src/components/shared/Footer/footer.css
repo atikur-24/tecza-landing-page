@@ -72,4 +72,19 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
   }
+  .footer-title {
+    padding-bottom: 18px;
+  }
+  .footer-links li {
+    padding-bottom: 14px;
+  }
+  .footer-desc {
+    line-height: 1.7;
+  }
+  .footer-location p {
+    line-height: 1.7;
+  }
+  .footer-logo img {
+    margin-bottom: 18px;
+  }
 }
