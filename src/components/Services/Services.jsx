@@ -1,9 +1,9 @@
 import React from "react";
 import { FaCode, FaLaptopCode, FaMobileAlt, FaPencilRuler } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import servicesData from "../../../public/data/services";
 import Button from "../ui/Button";
 import "./services.css";
-import servicesData from "/public/data/services";
 
 // here import services icons
 const iconMap = {

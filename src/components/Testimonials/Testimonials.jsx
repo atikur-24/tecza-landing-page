@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./testimonials.css";
 
 const Testimonials = () => {
   const testimonialsData = [
@@ -21,16 +20,28 @@ const Testimonials = () => {
       author: "Michael Johnson",
       designation: "Product Manager, Company C",
     },
+    {
+      id: 4,
+      quote: "Fantastic work! The team really understood our needs.",
+      author: "Emily Davis",
+      designation: "CTO, Company D",
+    },
+    {
+      id: 5,
+      quote: "Highly recommend their services, very satisfied with the results.",
+      author: "Robert Brown",
+      designation: "Founder, Company E",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonialsData.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonialsData.length - 3 : prevIndex - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === testimonialsData.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => (prevIndex >= testimonialsData.length - 3 ? 0 : prevIndex + 1));
   };
 
   return (
@@ -46,10 +57,14 @@ const Testimonials = () => {
           </button>
         </div>
       </div>
-      <div className="testimonial-slide">
-        <p className="testimonial-quote">"{testimonialsData[currentIndex].quote}"</p>
-        <p className="testimonial-author">{testimonialsData[currentIndex].author}</p>
-        <p className="testimonial-designation">{testimonialsData[currentIndex].designation}</p>
+      <div className="testimonials-slider">
+        {testimonialsData.slice(currentIndex, currentIndex + 3).map((testimonial) => (
+          <div key={testimonial.id} className="testimonial-card">
+            <p className="testimonial-quote">"{testimonial.quote}"</p>
+            <p className="testimonial-author">{testimonial.author}</p>
+            <p className="testimonial-designation">{testimonial.designation}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
