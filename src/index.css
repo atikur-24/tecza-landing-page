@@ -108,16 +108,18 @@ body {
   margin-bottom: 30px;
   text-align: center;
 }
+
 .section-title h1 {
   color: var(--secondary-color);
-  font-size: 40px;
-  line-height: 48px;
-  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
 }
+
 .section-title p {
   color: var(--gray-color-9);
-  padding-top: 6px;
-  width: 60%;
+  padding-top: 4px;
+  width: 100%;
   margin-block: auto;
 }
 
@@ -174,6 +176,17 @@ a {
     font-size: 18px;
     line-height: 26px;
     padding-inline: 22px;
+  }
+
+  .section-title h1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+  }
+
+  .section-title p {
+    padding-top: 6px;
+    width: 60%;
   }
 }
 
