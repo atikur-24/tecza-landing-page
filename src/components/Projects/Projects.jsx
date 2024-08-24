@@ -9,11 +9,9 @@ import "./projects.css";
 const Projects = () => {
   return (
     <section className="projects-section">
-      <SectionTitle
-        title="Our Projects"
-        description="We have a diverse range of clients, including startups, small businesses, and large enterprises. We have a diverse range of clients, including startups."
-      />
       <div className="container">
+        <SectionTitle title="Our Projects" description="Take a look at the diverse projects we have successfully completed and dedication to quality." />
+
         <div className="projects-grid">
           {projectsData.map((project) => (
             <div key={project.id} className="project-item">

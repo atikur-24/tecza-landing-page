@@ -5,8 +5,11 @@ import "./achievements.css";
 
 const Achievements = () => {
   return (
-    <section>
-      <SectionTitle title="Achievements" description="We have a diverse range of clients, including startups, small businesses, and large enterprises." />
+    <section id="achievement-main-container">
+      <SectionTitle
+        title="Achievements"
+        description="Explore the significant milestones and successes that highlight our journey and commitment to excellence and see the key milestones and successes we've achieved."
+      />
       <div className="achievements-section">
         <div className="container">
           <div className="achievements-container">

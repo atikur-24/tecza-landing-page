@@ -1,19 +1,19 @@
+/* contact container */
 .contact-container {
-  padding-block: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
 }
-
+/* contact map */
 .contact-map {
   width: 100%;
   height: 220px;
   border-radius: 4px;
   overflow: hidden;
 }
-
+/* contact form */
 .contact-form {
   width: 100%;
   background-color: var(--white-color);

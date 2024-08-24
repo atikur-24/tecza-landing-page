@@ -15,13 +15,7 @@ const iconMap = {
 
 const Services = () => {
   return (
-    <section
-      // TODO: remove
-      style={{
-        paddingBlock: "80px",
-      }}
-      className="container"
-    >
+    <section className="container">
       <div className="services-section">
         <div className="services-content">
           <h2 className="services-header">Transforming Ideas into Digital Experiences</h2>

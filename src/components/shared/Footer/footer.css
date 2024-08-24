@@ -1,7 +1,8 @@
-.footer {
+#footer-main-container {
   background-color: #f4f0ff;
   color: var(--slate-color-8);
-  padding-block: 60px;
+  padding-block: 30px;
+  color: var(--slate-color-8);
 }
 
 .grid-container {
@@ -51,6 +52,16 @@
   line-height: 1.5;
 }
 
+.copyright-text {
+  border-top: 1px solid var(--gray-color-7);
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 24px;
+}
+
+/* styles for medium screen devices (tablets, small laptops) */
 @media (min-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -67,7 +78,11 @@
   }
 }
 
+/* styles for large screen devices (desktops, larger laptops) */
 @media (min-width: 1024px) {
+  #footer-main-container {
+    padding-block: 36px;
+  }
   .grid-container {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
@@ -86,5 +101,18 @@
   }
   .footer-logo img {
     margin-bottom: 18px;
+  }
+  .copyright-text {
+    padding-top: 32px;
+  }
+}
+
+/* styles for extra-large screen devices (large desktops, widescreen) */
+@media (min-width: 1280px) {
+  #footer-main-container {
+    padding-block: 40px;
+  }
+  .achievements-content {
+    row-gap: 14px;
   }
 }

@@ -5,6 +5,7 @@
   height: 100%;
 }
 
+/* arrow buttons */
 .navigation-buttons {
   display: flex;
   gap: 10px;
@@ -16,7 +17,7 @@
 .arrow-btn {
   border: none;
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--white-color);
   border-radius: 999px;
   cursor: pointer;
   height: 40px;
@@ -46,6 +47,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
+/* .testimonial card */
 .testimonial-card {
   min-width: 96%;
   height: 225px;
@@ -113,6 +115,7 @@
 /* styles for large screen devices (desktops, larger laptops) */
 @media (min-width: 1024px) {
   .navigation-buttons {
+    gap: 14px;
     margin-bottom: 24px;
   }
 
@@ -159,4 +162,8 @@
 
 /* styles for extra-large screen devices (large desktops, widescreen) */
 @media (min-width: 1280px) {
+  .navigation-buttons {
+    gap: 16px;
+    margin-bottom: 28px;
+  }
 }

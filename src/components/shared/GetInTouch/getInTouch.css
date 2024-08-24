@@ -1,3 +1,7 @@
+#getInTouch-main-section {
+  padding-top: 26px;
+}
+
 .getInTouch-section {
   padding-block: 40px;
   background-color: var(--primary-color);
@@ -62,6 +66,10 @@
 
 /* styles for medium screen devices (tablets, small laptops) */
 @media (min-width: 768px) {
+  #getInTouch-main-section {
+    padding-top: 30px;
+  }
+
   .getInTouch-container {
     flex-direction: row;
     gap: 28px;
@@ -81,6 +89,9 @@
 
 /* styles for large screen devices (desktops, larger laptops) */
 @media (min-width: 1024px) {
+  #getInTouch-main-section {
+    padding-top: 35px;
+  }
   .getInTouch-container {
     gap: 36px;
   }
@@ -107,6 +118,10 @@
 
 /* styles for extra-large screen devices (large desktops, widescreen) */
 @media (min-width: 1280px) {
+  #getInTouch-main-section {
+    padding-top: 38px;
+  }
+
   .getInTouch-container {
     gap: 40px;
   }

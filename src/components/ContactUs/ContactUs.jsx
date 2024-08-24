@@ -1,12 +1,13 @@
 import React from "react";
 import Button from "../ui/Button";
 import SectionTitle from "../ui/SectionTitle";
-import "./contactus.css";
+import "./contactUs.css";
 
 const ContactUs = () => {
   return (
     <section className="container">
-      <SectionTitle title="Contact Us" description="We have a diverse range of clients, including startups, small businesses, and large enterprises." />
+      <SectionTitle title="Contact Us" description="Get in touch with us for any inquiries or assistance. We're here to help you." />
+
       <div className="contact-container">
         {/* map Part */}
         <div className="contact-map">

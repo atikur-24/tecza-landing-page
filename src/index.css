@@ -35,7 +35,8 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 26px 14px;
+  overflow: hidden;
 }
 
 /* all button styles with variants & sizes */
@@ -158,6 +159,9 @@ a {
   body {
     font-size: 16px;
   }
+  .container {
+    padding: 30px 16px;
+  }
   .btn-primary {
     font-size: 16px;
     line-height: 18.4px;
@@ -172,10 +176,17 @@ a {
 
 /* styles for large screen devices (desktops, larger laptops) */
 @media (min-width: 1024px) {
+  .container {
+    padding: 35px 22px;
+  }
   .btn-large {
     font-size: 18px;
     line-height: 26px;
     padding-inline: 22px;
+  }
+
+  .section-title {
+    margin-bottom: 36px;
   }
 
   .section-title h1 {
@@ -192,4 +203,7 @@ a {
 
 /* styles for extra-large screen devices (large desktops, widescreen) */
 @media (min-width: 1280px) {
+  .container {
+    padding: 38px 24px;
+  }
 }

@@ -1,5 +1,5 @@
+/* projects conainer */
 .projects-section {
-  padding: 60px 0;
   background-color: var(--whiten-color);
 }
 
@@ -9,6 +9,7 @@
   gap: 12px;
 }
 
+/* project card */
 .project-item {
   position: relative;
   overflow: hidden;
@@ -34,7 +35,7 @@
   height: 100%;
   object-fit: cover;
 }
-
+/* project content */
 .project-overlay {
   position: absolute;
   top: 0;
@@ -85,7 +86,7 @@
 }
 
 #project-btn {
-  margin-top: 30px;
+  margin-top: 28px;
   display: flex;
   justify-content: center;
 }
@@ -152,11 +153,18 @@
   .project-overlay {
     padding-left: 20px;
   }
+  #project-btn {
+    margin-top: 32px;
+  }
 }
 
 /* styles for extra-large screen devices (large desktops, widescreen) */
 @media (min-width: 1280px) {
   .project-image-container {
     height: 300px;
+  }
+
+  #project-btn {
+    margin-top: 36px;
   }
 }

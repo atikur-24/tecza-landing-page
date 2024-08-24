@@ -27,7 +27,8 @@ const Testimonials = () => {
 
   return (
     <section className="container">
-      <SectionTitle title="Testimonials" description="We have a diverse range of clients, including startups, small businesses, and large enterprises." />
+      <SectionTitle title="Testimonials" description="Hear what our clients have to say about their experiences working with us. Their feedback is our true testament of success." />
+
       <div className="testimonials-slider">
         <div className="navigation-buttons">
           <button onClick={prevSlide} className="arrow-btn" disabled={currentIndex === 0}>
