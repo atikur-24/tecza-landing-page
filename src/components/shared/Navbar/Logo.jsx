@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logoImg from "../../../../public/images/logo/logo.png";
 
 const Logo = () => {
   return (
-    <div className="navbar-logo">
+    <Link to="/" className="navbar-logo">
       <img src={logoImg} alt="Tecza" />
-    </div>
+    </Link>
   );
 };
 

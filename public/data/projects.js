@@ -1,9 +1,9 @@
-import project1 from "/images/projects/project-1.jpg";
-import project2 from "/images/projects/project-2.jpg";
-import project3 from "/images/projects/project-3.jpg";
-import project4 from "/images/projects/project-4.jpg";
-import project5 from "/images/projects/project-5.jpg";
-import project6 from "/images/projects/project-6.jpg";
+import project1 from "../images/projects/project-1.jpg";
+import project2 from "../images/projects/project-2.jpg";
+import project3 from "../images/projects/project-3.jpg";
+import project4 from "../images/projects/project-4.jpg";
+import project5 from "../images/projects/project-5.jpg";
+import project6 from "../images/projects/project-6.jpg";
 
 const projectsData = [
   {
