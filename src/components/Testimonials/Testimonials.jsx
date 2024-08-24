@@ -1,70 +1,58 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import testimonialsData from "../../../public/data/testimonials";
+import SectionTitle from "../ui/SectionTitle";
+import "./testimonials.css";
 
 const Testimonials = () => {
-  const testimonialsData = [
-    {
-      id: 1,
-      quote: "This company provided excellent service and their team was extremely helpful.",
-      author: "John Doe",
-      designation: "CEO, Company A",
-    },
-    {
-      id: 2,
-      quote: "I'm highly satisfied with the quality of work delivered. Highly recommend!",
-      author: "Jane Smith",
-      designation: "Marketing Head, Company B",
-    },
-    {
-      id: 3,
-      quote: "Professional, efficient, and great results. Couldn't ask for more.",
-      author: "Michael Johnson",
-      designation: "Product Manager, Company C",
-    },
-    {
-      id: 4,
-      quote: "Fantastic work! The team really understood our needs.",
-      author: "Emily Davis",
-      designation: "CTO, Company D",
-    },
-    {
-      id: 5,
-      quote: "Highly recommend their services, very satisfied with the results.",
-      author: "Robert Brown",
-      designation: "Founder, Company E",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonialsData.length - 3 : prevIndex - 1));
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex < testimonialsData?.length - 1) {
+        return prevIndex + 1;
+      }
+      return prevIndex;
+    });
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex >= testimonialsData.length - 3 ? 0 : prevIndex + 1));
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex > 0) {
+        return prevIndex - 1;
+      }
+      return prevIndex;
+    });
   };
 
   return (
-    <section className="testimonials-container">
-      <div className="testimonials-header">
-        <h2>Testimonials</h2>
+    <section className="container">
+      <SectionTitle title="Testimonials" description="We have a diverse range of clients, including startups, small businesses, and large enterprises." />
+      <div className="testimonials-slider">
         <div className="navigation-buttons">
-          <button onClick={handlePrev} className="nav-button">
-            Previous
+          <button onClick={prevSlide} className="arrow-btn" disabled={currentIndex === 0}>
+            <FaArrowLeft />
           </button>
-          <button onClick={handleNext} className="nav-button">
-            Next
+          <button onClick={nextSlide} className="arrow-btn" disabled={currentIndex === testimonialsData?.length - 3}>
+            <FaArrowRight />
           </button>
         </div>
-      </div>
-      <div className="testimonials-slider">
-        {testimonialsData.slice(currentIndex, currentIndex + 3).map((testimonial) => (
-          <div key={testimonial.id} className="testimonial-card">
-            <p className="testimonial-quote">"{testimonial.quote}"</p>
-            <p className="testimonial-author">{testimonial.author}</p>
-            <p className="testimonial-designation">{testimonial.designation}</p>
+        <div className="ts-slider-container">
+          <div className="ts-slider-inner" style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}>
+            {testimonialsData?.map((testimonial) => (
+              <div key={testimonial.id} className="testimonial-card">
+                <div className="testimonial-image-container">
+                  <img src={testimonial.image} alt={testimonial.author} className="testimonial-image" />
+                </div>
+                <p className="testimonial-quote">"{testimonial.quote}"</p>
+                <div>
+                  <p className="testimonial-author">{testimonial.author}</p>
+                  <p className="testimonial-designation">{testimonial.designation}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );
