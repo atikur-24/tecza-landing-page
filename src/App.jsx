@@ -9,7 +9,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 const App = () => {
   return (
     <div>
-      <Banner />
+      {/* <Banner /> */}
       <Services />
       <Achievements />
       <Projects />
