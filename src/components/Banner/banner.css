@@ -1,0 +1,138 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.slider-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+  min-width: 100%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.slider-title {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.slider-subtitle {
+  color: var(--white-color);
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}
+
+.slider-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slider-button:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* styles for medium screen devices (tablets, small laptops) */
+@media (min-width: 640px) {
+  .slider {
+    height: 270px;
+  }
+  .slider-item {
+    height: 270px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .slider {
+    height: 300px;
+  }
+  .slider-item {
+    height: 300px;
+  }
+}
+
+/* styles for large screen devices (desktops, larger laptops) */
+@media (min-width: 1024px) {
+  .slider-content {
+    gap: 16px;
+  }
+
+  .slider {
+    height: 400px;
+  }
+  .slider-item {
+    height: 400px;
+  }
+
+  .slider-title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .slider-button {
+    font-size: 2rem;
+    padding: 10px;
+  }
+}
+
+/* styles for extra-large screen devices (large desktops, widescreen) */
+@media (min-width: 1280px) {
+  .slider {
+    height: 450px;
+  }
+  .slider-item {
+    height: 450px;
+  }
+
+  .slider-content {
+    gap: 18px;
+  }
+}
